@@ -14,7 +14,13 @@
     transform: translateY(0);
   }
 }
-
+@media (max-width: 700px) {
+  .media-item {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+  }
+}
 body {
   align-items: center;
   display: flex;
@@ -94,7 +100,7 @@ a.nav-item:hover {
 .first-stack {
   margin-top: 70px;
   display: flex;
-  flex-direction: space-around;
+  justify-content: space-around;
   margin-bottom:120px;
   align-items:center;
 }
@@ -240,22 +246,81 @@ a.contact{
   margin-top: 20px;
   background-color:#b4c2c7;
   width:100%;
-  
+  display:flex;
+  flex-direction: column;
+
 }
 
 .media-title{
-  display:flex;
-  flex-direction: column;
-  padding:20px;
+  
+  margin-left: 50px;
   margin-bottom:0px;
-  margin:0;
+
 }
 .media-title1{
   font-size:35px;
   color: white;
+  margin-bottom:2px;
 }
 .media-title2{
   font-size:14px;
-
+  display:block;
   color:rgb(237, 233, 233)
+}
+
+.media-content{
+  display:flex;
+  flex-wrap: wrap; /*允许换行*/
+  flex-direction: row;
+  
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 60px;
+}
+
+.media-item{
+  display: flex;
+  width: 38%;
+  margin-bottom: 60px;
+  align-items:center;
+  margin:1%;  /*两个一行*/
+  flex-wrap:wrap;
+  margin-bottom: 50px;
+}
+
+
+.media-item-img{
+  width:105px;
+  height:105px;
+  border-radius:30%;
+  margin-right: 35px;
+}
+
+.media-h{
+ margin-bottom: 2px;;
+margin-top: 0px;
+}
+.media-p{
+ margin-top: 2px;
+  display:block;
+}
+.media-button{
+  background-color:#a4b8a2 ;
+  color:white;
+  border:  #a4b8a2;
+  border-radius: 20px;
+  padding: 8px 28px;
+  align-items: center;
+  font-size:15px;
+  opacity:0.8;
+  height:35px;
+}
+.media-button:hover{
+  opacity:1.2;
+  color:white
+}
+
+.blog{
+  background-color: #f4f3ee;
+  height:120px
 }
