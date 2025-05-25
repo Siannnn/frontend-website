@@ -320,13 +320,72 @@ margin-top: 0px;
   color:white
 }
 
-/* .blog{
+.blog{
   background-color: #f4f3ee;
-  height:120px
-} */
+  height:100vh;
+  display:flex;
+  margin:0;
+  overflow:hidden;
+}
+.blog-content{
+  flex-wrap:wrap;
+  
+}
+.blog-item{
+  height:50vh;
+  border:#6b8f97 2px solid;
+  border-radius: 20px;
+  width:250px;
+  color:black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin:20px 5px 5px 10px;
+}
+.blog-header{
+  height:200px;
+  overflow:hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.blog-item-img{
+  object-fit:cover;
+  height:100%;
+  width:100%;
+  display:block;
+}
+.blog-item-con{
+  padding:8px 8px 1px 8px;
+}
+.blog-h{
+  height:22px;
+  margin:0;
+}
+.blog-p{
+  color:#777;
+  margin:3px 0 10px;
+  font-size:13px;
+}
+.author-intro{
+  display:flex;
+}
+.author-img{
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  object-fit: cover;    /* 保证图片填满圆形区域且不变形 */
+  
+}
+.author{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-aound;
+  margin-left:10px;
+  width:100px;
+  
+}
 .imgs-t{
   margin-bottom: 5px;
   margin-top:10px;
+  background-color: #b4c2c7;
 }
 .imgs-title{
   margin-left: 30px;
@@ -336,19 +395,19 @@ margin-top: 0px;
   margin-bottom: 5px;
 }
 .imgs-title1{
-  color:#6b8f97;
+  color:white;
   margin-bottom:2px;
   font-size:35px;
 }
 .imgs-title2{
-  color:#9da2a3;
+  color:rgb(237, 233, 233);
 }
 .imgs{
   height:80vh;
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f3ee;
+  background-color: #b4c2c7;
 
   width:90vw;
   overflow:hidden;
@@ -360,7 +419,7 @@ margin-top: 0px;
   background-position:center;
   justify-content: center;
   border-color: #f4f3ee;
-  height:70vh;
+  height:80vh;
   flex:0.5;
   margin:10px;
   background-size: cover;
