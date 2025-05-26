@@ -14,6 +14,9 @@
     transform: translateY(0);
   }
 }
+html{
+  scroll-behavior:smooth;
+}
 @media (max-width: 700px) {
   .media-item {
     width: 100%;
@@ -22,11 +25,12 @@
   }
 }
 body {
-  
+
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0;
   background-color: #f4f3ee;
+
 }
 body.need-padding {
   max-width: 1200px;
@@ -94,10 +98,13 @@ a.nav-item:hover {
 
 .img{
   user-select:none;   /*  */
-  
-  
+
+}
+.main-content {
+  flex:1;
 }
 .first-stack {
+  scroll-margin-top:50px;
   margin-top: 70px;
   display: flex;
   justify-content: space-around;
@@ -189,7 +196,7 @@ a.contact{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  margin-top:50px;
+  margin-top:30px;
   border: #f4f3ee 2px solid;
   border-radius: 14px;
   padding:10px 10px;
@@ -248,13 +255,14 @@ a.contact{
   width:100%;
   display:flex;
   flex-direction: column;
-  height:90vh;
+  min-height:94vh;
+  scroll-margin-top:60px;
 }
 
 .media-title{
-  
+  margin-top:25px;
   margin-left: 50px;
-  margin-bottom:0px;
+  margin-bottom:20px;
 
 }
 .media-title1{
@@ -275,17 +283,17 @@ a.contact{
   
   margin-top: 20px;
   padding-left: 40px;
-  padding-bottom: 200px;
+  
 }
 
 .media-item{
   display: flex;
   width: 38%;
-  margin-bottom: 80px;
+  
   align-items:center;
   margin:1%;  /*两个一行*/
   flex-wrap:wrap;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 
@@ -322,30 +330,50 @@ margin-top: 0px;
 
 .blog{
   background-color: #f4f3ee;
-  height:100vh;
+  min-height:90vh;
   display:flex;
   margin:0;
-  overflow:hidden;
+  flex-direction: column;
+  scroll-margin-top:50px;
+}
+.blog-title{
+  margin-top: 15px;
+  margin-left:20px;
+  margin-bottom: 10px;;
+}
+.blog-title1{
+  margin-bottom: 2px;
+  color: #6b8f97;
+  font-size: 35px;
+}
+.blog-title2{
+  font-size:14px;
+  color:#495d63;
+
 }
 .blog-content{
-  flex-wrap:wrap;
-  
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap; /*允许换行*/
+ 
 }
 .blog-item{
   height:50vh;
   border:#6b8f97 2px solid;
   border-radius: 20px;
+  overflow:hidden;  /*这里加这一句才可实现裁剪图片填充*/
   width:250px;
   color:black;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin:20px 5px 5px 10px;
+  margin:20px 15px 5px 20px;
+   display: flex;
+  flex-direction: column;
+ margin-top:50px;
 }
 .blog-header{
   height:200px;
-  overflow:hidden;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
+  
+  }
 .blog-item-img{
   object-fit:cover;
   height:100%;
@@ -353,7 +381,11 @@ margin-top: 0px;
   display:block;
 }
 .blog-item-con{
-  padding:8px 8px 1px 8px;
+  
+  display:flex;
+  flex-direction: column;
+  height:100%;
+
 }
 .blog-h{
   height:22px;
@@ -365,7 +397,10 @@ margin-top: 0px;
   font-size:13px;
 }
 .author-intro{
+ margin-top: auto;
   display:flex;
+  
+
 }
 .author-img{
   height:35px;
@@ -379,13 +414,14 @@ margin-top: 0px;
   flex-direction: column;
   justify-content:space-aound;
   margin-left:10px;
-  width:100px;
+  
   
 }
 .imgs-t{
-  margin-bottom: 5px;
-  margin-top:10px;
+  
+  margin-top:20px;
   background-color: #b4c2c7;
+  scroll-margin-top: 30px;
 }
 .imgs-title{
   margin-left: 30px;
@@ -403,7 +439,7 @@ margin-top: 0px;
   color:rgb(237, 233, 233);
 }
 .imgs{
-  height:80vh;
+  
   display:flex;
   justify-content: center;
   align-items: center;
@@ -412,6 +448,7 @@ margin-top: 0px;
   width:90vw;
   overflow:hidden;
 
+  padding-bottom: 20px;
 }
 
 .panel{
@@ -419,9 +456,10 @@ margin-top: 0px;
   background-position:center;
   justify-content: center;
   border-color: #f4f3ee;
-  height:80vh;
+  min-height:80vh;
   flex:0.5;
-  margin:10px;
+  margin-left:10px;
+  margin-right:10px;
   background-size: cover;
   position:relative;
   -webkit-transition:all 700ms ease-in;
@@ -442,4 +480,23 @@ margin-top: 0px;
 .panel.active h3{
   opacity:1;
   transition:opacity 0.3s ease-in 0.4s;
+}
+
+.bottom{
+  height: 20vh;
+  background-color: #d0d0d0;
+
+  margin-bottom:0;
+  width:100vw;
+}
+
+.bottom-content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  font-size:13px;
+
+  color:#495d63;
 }
